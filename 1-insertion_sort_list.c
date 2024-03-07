@@ -16,5 +16,22 @@ void insertion_sort_list(listint_t **list)
 
 	while (current != NULL)
 	{
+		int key = current->n;
+        prev = current->prev;
+
+        /* Move elements of list greater than key, to one position ahead of their current position */
+        while (prev != NULL && prev->n > key)
+        {
+            prev->next->n = prev->n;
+            prev = prev->prev;
+        }
+
+        /* Insert key into correct position */
+        if (prev != NULL)
+            prev->next->n = key;
+        else
+            (*list)->n = key;
+
+        current = current->next;
 	}
 }
