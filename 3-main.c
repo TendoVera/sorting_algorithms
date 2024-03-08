@@ -14,12 +14,8 @@ int main(void)
 
     print_array(array, n);
     printf("\n");
-    selection_sort(array, n);
+    quick_sort(array, n);
     printf("\n");
     print_array(array, n);
     return (0);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 761e03806ddd626df77a10b9f4c707680b52e749
